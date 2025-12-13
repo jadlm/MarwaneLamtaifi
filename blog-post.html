@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Elena Montague</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation (identique à blog.html) -->
+    <header id="header">
+        ... (même navigation)
+    </header>
+
+    <!-- Blog Post Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 id="blog-post-title">Article Title</h1>
+                <p id="blog-post-meta">Date and Category</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Post Content -->
+    <section class="blog-post-content-section">
+        <div class="container">
+            <div class="blog-post-content">
+                <div class="blog-post-image">
+                    <img id="blog-post-image" src="" alt="">
+                </div>
+                <div id="blog-post-body">
+                    <!-- Le contenu de l'article sera inséré ici -->
+                </div>
+                <div class="blog-post-navigation">
+                    <a href="blog.html" class="btn btn-primary">Back to Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (identique) -->
+    <footer>
+        ... (identique à blog.html)
+    </footer>
+
+    <script src="js/blog-data.js"></script>
+    <script>
+        // Récupérer l'ID de l'article depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = parseInt(urlParams.get('id'));
+
+        // Trouver l'article dans le tableau blogPosts
+        const post = blogPosts.find(p => p.id === postId);
+
+        if (post) {
+            // Mettre à jour les éléments de la page
+            document.getElementById('blog-post-title').textContent = post.title;
+            document.getElementById('blog-post-meta').textContent = `${post.date} | ${post.category}`;
+            document.getElementById('blog-post-image').src = post.image;
+            document.getElementById('blog-post-image').alt = post.title;
+            document.getElementById('blog-post-body').innerHTML = post.content;
+        } else {
+            // Article non trouvé
+            document.getElementById('blog-post-title').textContent = 'Article Not Found';
+            document.getElementById('blog-post-body').innerHTML = '<p>Sorry, the article you are looking for does not exist.</p>';
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

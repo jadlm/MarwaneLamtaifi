@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Elena Montague</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-pen-nib"></i> E.Montague</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#books">Books</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="excerpts.html">Excerpts</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Writer's Blog</h1>
+                <p>Thoughts on writing, creativity, and the literary world</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-page-section">
+        <div class="container">
+            <div class="blog-page-content">
+                <div class="blog-main">
+                    <!-- Featured Post -->
+                    <div class="featured-blog-post">
+                        <div class="featured-blog-img" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"></div>
+                        <div class="featured-blog-content">
+                            <span class="blog-category">Writing Process</span>
+                            <h2>The Art of Character Development</h2>
+                            <span class="blog-date">June 15, 2023</span>
+                            <p>Creating characters that feel real and relatable is one of the most challenging yet rewarding aspects of writing. In this post, I explore my process for developing multidimensional characters that resonate with readers.</p>
+                            <a href="article.html" class="btn btn-primary">Read Full Article</a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Posts Grid -->
+                    <div class="blog-posts-grid" id="blogPostsContainer">
+                        <!-- Blog posts will be loaded by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="blog-sidebar">
+                    <div class="sidebar-widget">
+                        <h3>About This Blog</h3>
+                        <p><B>How to?</B> is a weekly blog about writing, It is a space where I share how writing truly works, not the myths, not the shortcuts, but the practice behind the pages. Each week, I explore how to start, how to continue, how to finish, and how to live with writing as a daily discipline.
+                            This blog is built from experience, blank pages, rejected drafts, published books, and the quiet persistence it takes to keep going. You will find practical advice, clear methods, and honest reflections from a writer still learning, still questioning, still writing.
+                            <br><B>How to? </B>is not here to teach you how to become famous. It is here to teach you how to become consistent. How to think like a writer. How to stay when doubt appears. How to turn silence into sentences.
+                            Because writing begins the same way every time with a question.
+                            <B>How to?</B></p>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Writing Process <span>12</span></a></li>
+                            <li><a href="#">Creative Inspiration <span>8</span></a></li>
+                            <li><a href="#">Book Reviews <span>5</span></a></li>
+                            <li><a href="#">Literary Events <span>7</span></a></li>
+                            <li><a href="#">Writing Tips <span>15</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-widget">
+                        <h3>Popular Posts</h3>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <h4><a href="#">Finding Your Writer's Voice</a></h4>
+                                <span class="post-date">May 10, 2023</span>
+                            </div>
+                            <div class="popular-post">
+                                <h4><a href="#">Overcoming Writer's Block</a></h4>
+                                <span class="post-date">April 22, 2023</span>
+                            </div>
+                            <div class="popular-post">
+                                <h4><a href="#">The Importance of Reading as a Writer</a></h4>
+                                <span class="post-date">March 15, 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to My Writing Blog</h2>
+                <p>Get updates on new posts, writing tips, and literary insights delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">E.Montague</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#books">Books</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="excerpts.html">Excerpts</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Elena Montague. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog-data.js"></script>
+</body>
+</html>
