@@ -2,35 +2,43 @@
 const books = [
     {
         id: 1,
-        title: "Whispers of the Midnight Sun",
+        title: "Between Fear and Courage",
         year: "2023",
-        image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "#",
+        image: "images/book1.jpg",
+        amazonLink: "https://www.amazon.com/dp/8863400273",
         excerptLink: "excerpts.html"
     },
     {
         id: 2,
-        title: "The Silent Harbor",
-        year: "2021",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "#",
-        excerptLink: "excerpts.html"
+        title: "After You, My Shadow",
+        year: "2023",
+        image: "https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        excerptLink: "excerpts.html#shadow"
     },
     {
         id: 3,
-        title: "Echoes of a Distant Summer",
-        year: "2019",
-        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "#",
-        excerptLink: "excerpts.html"
+        title: "Une nuit À Taghazout",
+        year: "2023",
+        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        excerptLink: "excerpts.html#taghazout"
     },
     {
         id: 4,
-        title: "The Secret Garden of Now",
-        year: "2017",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "#",
-        excerptLink: "excerpts.html"
+        title: "The Whispers of Love",
+        year: "2023",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        excerptLink: "excerpts.html#whispers"
+    },
+    {
+        id: 5,
+        title: "Under the Fallen Moon",
+        year: "2023",
+        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        excerptLink: "excerpts.html#moon"
     }
 ];
 
@@ -43,7 +51,7 @@ const blogPosts = [
         excerpt: "Exploring how to create multidimensional characters that resonate with readers and drive compelling narratives forward.",
         image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         category: "Writing Process",
-        link: "#"
+        link: "blog-post.html?id=1"
     },
     {
         id: 2,
@@ -52,7 +60,7 @@ const blogPosts = [
         excerpt: "How ordinary moments can transform into extraordinary stories with the right perspective and attention to detail.",
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         category: "Creative Inspiration",
-        link: "#"
+        link: "blog-post.html?id=2"
     },
     {
         id: 3,
@@ -61,108 +69,9 @@ const blogPosts = [
         excerpt: "Debunking common misconceptions about how writers work and finding a routine that fosters creativity and productivity.",
         image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         category: "Writing Process",
-        link: "#"
-    },
-    {
-        id: 4,
-        title: "Overcoming Writer's Block",
-        date: "March 22, 2023",
-        excerpt: "Practical strategies for breaking through creative barriers and rediscovering your writing flow.",
-        image: "https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        category: "Writing Tips",
-        link: "#"
-    },
-    {
-        id: 5,
-        title: "The Importance of Reading as a Writer",
-        date: "February 14, 2023",
-        excerpt: "How reading widely across genres can enhance your own writing and expand your creative horizons.",
-        image: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        category: "Writing Tips",
-        link: "#"
-    },
-    {
-        id: 6,
-        title: "Building Fictional Worlds",
-        date: "January 8, 2023",
-        excerpt: "Creating immersive settings that feel authentic and serve the narrative without overwhelming the reader.",
-        image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        category: "Writing Process",
-        link: "#"
+        link: "blog-post.html?id=3"
     }
 ];
-
-// Données pour les critiques
-const reviews = [
-    {
-        id: 1,
-        text: "Montague's prose is nothing short of breathtaking. She paints with words, creating landscapes so vivid you can feel the Arctic chill and smell the salt air of her coastal towns.",
-        reviewer: "James Patterson",
-        publication: "The New York Times Book Review",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-    },
-    {
-        id: 2,
-        text: "A masterclass in character development. Montague's protagonists stay with you long after you've turned the final page, their journeys becoming part of your own.",
-        reviewer: "Margaret Atwood",
-        publication: "Literary Review Quarterly",
-        image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-    },
-    {
-        id: 3,
-        text: "Elena Montague has solidified her position as one of the most important literary voices of our generation. Each novel is a gift to readers who cherish thoughtful, beautifully crafted fiction.",
-        reviewer: "Colm Tóibín",
-        publication: "The Guardian Books",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-    }
-];
-
-// Données pour les extraits
-const bookExcerpts = {
-    whispers: [
-        {
-            chapter: "Chapter 1: The Arrival",
-            content: "The plane descended through a veil of clouds, revealing a landscape so alien it took Elara's breath away. Below, the Arctic tundra stretched in every direction, a vast canvas of white and gray punctuated by dark patches of stubborn vegetation. The midnight sun hung low on the horizon, casting long, distorted shadows that seemed to reach for the aircraft as it made its final approach.",
-            pages: "Pages 15-17"
-        },
-        {
-            chapter: "Chapter 3: Arctic Silence",
-            content: "The midnight sun hung low on the horizon, a reluctant sentinel against the encroaching darkness. In this land where day and night danced their eternal ballet, time seemed to stretch and bend, much like the shadows that elongated across the tundra.",
-            pages: "Pages 45-47"
-        },
-        {
-            chapter: "Chapter 5: First Light",
-            content: "When the first true darkness finally fell, it wasn't the absence of light that startled Elara, but the sudden appearance of stars. Thousands of them, more than she had ever seen, emerged from behind a curtain she hadn't realized was there.",
-            pages: "Pages 89-92"
-        }
-    ],
-    harbor: [
-        {
-            chapter: "Chapter 2: Morning Fog",
-            content: "The harbor slept under a blanket of fog, its usual bustle muted to a series of soft echoes. Ships lay anchored like slumbering giants, their masts piercing the gray morning sky.",
-            pages: "Pages 34-36"
-        },
-        {
-            chapter: "Chapter 7: Reflections",
-            content: "He walked the weathered planks of the dock, each step a meditation. The salt air filled his lungs, and with each exhale, he released the doubts that had anchored him to a past he could no longer change.",
-            pages: "Pages 122-125"
-        }
-    ],
-    echoes: [
-        {
-            chapter: "Prologue: Summer 1972",
-            content: "That summer smelled of cut grass and possibilities. The air hummed with cicadas, and time moved with the languid pace of honey dripping from a spoon.",
-            pages: "Pages 3-5"
-        }
-    ],
-    garden: [
-        {
-            chapter: "Chapter 4: The Hidden Door",
-            content: "The ivy-covered wall looked impenetrable, but when Clara pushed at just the right spot, a section swung inward without a sound, revealing a world she had only glimpsed in dreams.",
-            pages: "Pages 67-70"
-        }
-    ]
-};
 
 // Fonctions utilitaires
 function renderBooks(containerId, limit = null) {
@@ -180,7 +89,7 @@ function renderBooks(containerId, limit = null) {
                 <h3 class="book-title">${book.title}</h3>
                 <div class="book-year">${book.year}</div>
                 <div class="book-links">
-                    <a href="${book.amazonLink}" class="book-link"><i class="fab fa-amazon"></i> Amazon</a>
+                    <a href="${book.amazonLink}" class="book-link" target="_blank"><i class="fab fa-amazon"></i> Amazon</a>
                     <a href="${book.excerptLink}" class="book-link"><i class="fas fa-book-open"></i> Excerpt</a>
                 </div>
             </div>
@@ -207,53 +116,6 @@ function renderBlogPosts(containerId, limit = null) {
             </div>
         </div>
     `).join('');
-}
-
-function renderReviews(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    container.innerHTML = reviews.map(review => `
-        <div class="review-card">
-            <div class="review-text">
-                ${review.text}
-            </div>
-            <div class="reviewer">
-                <div class="reviewer-img">
-                    <img src="${review.image}" alt="${review.reviewer}">
-                </div>
-                <div class="reviewer-info">
-                    <h4>${review.reviewer}</h4>
-                    <p>${review.publication}</p>
-                </div>
-            </div>
-        </div>
-    `).join('');
-}
-
-function renderExcerpts() {
-    const tabs = document.querySelectorAll('.book-tab');
-    const excerptsContainer = document.querySelector('.excerpts-container');
-    
-    if (!tabs.length || !excerptsContainer) return;
-    
-    // Gestion des onglets
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const bookId = this.getAttribute('data-book');
-            
-            // Mettre à jour l'onglet actif
-            tabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Mettre à jour le contenu des extraits
-            const bookExcerptsContainer = excerptsContainer.querySelector(`#${bookId}-excerpts`);
-            if (bookExcerptsContainer) {
-                document.querySelectorAll('.book-excerpts').forEach(ex => ex.classList.remove('active'));
-                bookExcerptsContainer.classList.add('active');
-            }
-        });
-    });
 }
 
 function setupMobileMenu() {
@@ -366,7 +228,7 @@ function updateCopyrightYear() {
 
 function initAnimations() {
     // Animation pour les cartes
-    const animateCards = document.querySelectorAll('.book-card, .blog-card, .review-card, .achievement, .excerpt-item');
+    const animateCards = document.querySelectorAll('.book-card, .blog-card, .achievement, .excerpt-item');
     
     const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -385,241 +247,173 @@ function initAnimations() {
     });
 }
 
-// Initialisation générale
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialiser les composants communs
-    setupMobileMenu();
-    setupHeaderScroll();
-    setupSmoothScroll();
-    updateCopyrightYear();
-    setupNewsletterForms();
-    initAnimations();
+// Fonction pour gérer les onglets des extraits
+function setupExcerptsPage() {
+    console.log("Initialisation de la page excerpts...");
     
-    // Rendre les livres sur la page d'accueil
-    renderBooks('booksGrid', 3);
-    
-    // Rendre les articles de blog sur la page d'accueil
-    const blogPreviewContainer = document.getElementById('blogPostsContainer');
-    if (blogPreviewContainer) {
-        // Page de blog complète
-        renderBlogPosts('blogPostsContainer');
-    } else {
-        // Aperçu sur la page d'accueil
-        renderBlogPosts('blogPosts', 3);
-    }
-    
-    // Rendre les critiques
-    renderReviews('reviewsContainer');
-    
-    // Initialiser les extraits (si sur la page excerpts)
-    renderExcerpts();
-    
-    // Initialiser le formulaire de contact
-    setupContactForm();
-});
-// Dans la fonction renderBlogPosts
-container.innerHTML = postsToRender.map(post => `
-    <div class="blog-card">
-        <div class="blog-img">
-            <img src="${post.image}" alt="${post.title}">
-        </div>
-        <div class="blog-content">
-            <span class="blog-date">${post.date}</span>
-            <h3 class="blog-title">${post.title}</h3>
-            <p class="blog-excerpt">${post.excerpt}</p>
-            <a href="blog-post.html?id=${post.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </div>
-`).join('');
-// Fonction pour gérer la navigation entre les livres
-// Gestion des onglets des livres pour la page excerpts.html
-function setupBookTabs() {
     const tabs = document.querySelectorAll('.book-tab');
-    const excerptsContainers = document.querySelectorAll('.book-excerpts');
+    const excerpts = document.querySelectorAll('.book-excerpts');
     
-    // Si on n'est pas sur la page excerpts, on ne fait rien
-    if (tabs.length === 0 || excerptsContainers.length === 0) return;
+    console.log(`Nombre d'onglets trouvés: ${tabs.length}`);
+    console.log(`Nombre de sections trouvées: ${excerpts.length}`);
     
-    // Fonction pour changer de livre
-    function switchBook(bookId) {
-        console.log(`Chargement du livre: ${bookId}`);
+    if (tabs.length === 0 || excerpts.length === 0) return;
+    
+    // Fonction pour changer d'onglet
+    function switchTab(bookId) {
+        console.log(`Changement vers le livre: ${bookId}`);
         
-        // Mettre à jour les onglets
+        // Désactiver tous les onglets et sections
         tabs.forEach(tab => {
-            if (tab.getAttribute('data-book') === bookId) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
-            }
+            tab.classList.remove('active');
         });
         
-        // Mettre à jour les conteneurs d'extraits
-        excerptsContainers.forEach(container => {
-            if (container.id === `${bookId}-excerpts`) {
-                container.classList.add('active');
-                container.style.display = 'block';
-                
-                // Animation de fondu
-                container.style.animation = 'fadeIn 0.5s ease';
-            } else {
-                container.classList.remove('active');
-                container.style.display = 'none';
-            }
+        excerpts.forEach(excerpt => {
+            excerpt.classList.remove('active');
         });
         
-        // Faire défiler vers le haut de la section si sur mobile
-        if (window.innerWidth < 768) {
-            setTimeout(() => {
-                document.querySelector('.excerpts-page-section').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 100);
+        // Activer l'onglet cliqué
+        const activeTab = document.querySelector(`.book-tab[data-book="${bookId}"]`);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+        
+        // Afficher la section correspondante
+        const activeExcerpt = document.getElementById(`${bookId}-excerpts`);
+        if (activeExcerpt) {
+            activeExcerpt.classList.add('active');
         }
     }
     
-    // Ajouter un écouteur d'événements à chaque onglet
+    // Ajouter un écouteur d'événement à chaque onglet
     tabs.forEach(tab => {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             const bookId = this.getAttribute('data-book');
-            switchBook(bookId);
+            console.log(`Clic sur l'onglet: ${bookId}`);
+            switchTab(bookId);
             
             // Mettre à jour l'URL sans recharger la page
-            history.pushState(null, null, `#${bookId}`);
+            history.pushState({ bookId }, '', `#${bookId}`);
         });
     });
     
     // Vérifier si une ancre est présente dans l'URL au chargement
     function checkInitialBook() {
-        const hash = window.location.hash.substring(1); // Retirer le #
+        const hash = window.location.hash.substring(1);
         const validBookIds = ['fear', 'shadow', 'taghazout', 'whispers', 'moon'];
         
         if (hash && validBookIds.includes(hash)) {
-            // Si l'URL contient une ancre valide, charger ce livre
-            switchBook(hash);
+            console.log(`Chargement initial depuis l'URL: ${hash}`);
+            switchTab(hash);
         } else {
-            // Sinon, charger le livre actif par défaut
-            const activeTab = document.querySelector('.book-tab.active');
-            if (activeTab) {
-                const initialBookId = activeTab.getAttribute('data-book');
-                switchBook(initialBookId);
+            // Activer le premier onglet par défaut
+            const firstTab = document.querySelector('.book-tab');
+            if (firstTab) {
+                const firstBookId = firstTab.getAttribute('data-book');
+                console.log(`Livre par défaut: ${firstBookId}`);
+                switchTab(firstBookId);
             }
         }
     }
     
     // Gérer les changements d'URL (navigation avant/arrière)
-    window.addEventListener('popstate', checkInitialBook);
+    window.addEventListener('popstate', (event) => {
+        if (event.state && event.state.bookId) {
+            switchTab(event.state.bookId);
+        }
+    });
     
     // Initialiser au chargement
     checkInitialBook();
 }
 
-// Initialisation de la page excerpts
-function initExcerptsPage() {
-    setupBookTabs();
-    
-    // Ajouter l'animation aux éléments d'extraits
-    const excerptItems = document.querySelectorAll('.excerpt-item');
-    excerptItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        item.style.transitionDelay = `${index * 0.1}s`;
-        
-        setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, 100);
-    });
-}
-
-// Modifiez la fonction d'initialisation principale dans main.js :
+// Initialisation générale
+// Initialisation générale
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM chargé - Initialisation...");
+    
     // Initialiser les composants communs
     setupMobileMenu();
     setupHeaderScroll();
-    setupSmoothScroll();
     updateCopyrightYear();
     setupNewsletterForms();
     initAnimations();
     
-    // Initialiser la page spécifique
-    const currentPage = window.location.pathname;
+    // Vérifier sur quelle page nous sommes
+    const currentPath = window.location.pathname;
+    console.log(`Page actuelle: ${currentPath}`);
     
-    if (currentPage.includes('excerpts.html')) {
-        initExcerptsPage();
-    } else if (currentPage.includes('index.html') || currentPage === '/') {
-        // Rendre les livres sur la page d'accueil
-        renderBooks('booksGrid', 3);
-        
-        // Rendre les articles de blog sur la page d'accueil
-        const blogPreviewContainer = document.getElementById('blogPostsContainer');
-        if (blogPreviewContainer) {
-            // Page de blog complète
-            renderBlogPosts('blogPostsContainer');
-        } else {
-            // Aperçu sur la page d'accueil
-            renderBlogPosts('blogPosts', 3);
-        }
-        
-        // Rendre les critiques
-        renderReviews('reviewsContainer');
-        
-        // Initialiser le formulaire de contact
-        setupContactForm();
-    } else if (currentPage.includes('blog.html')) {
-        // Initialiser la page blog
+    if (currentPath.includes('contact.html')) {
+        console.log("Initialisation de la page contact...");
+        setupContactPage();
+        setupSmoothScroll();
+    } else if (currentPath.includes('excerpts.html') || window.location.hash) {
+        console.log("Initialisation de la page excerpts...");
+        setupExcerptsPage();
+        setupSmoothScroll();
+    } else if (currentPath.includes('blog.html')) {
+        console.log("Initialisation de la page blog...");
         renderBlogPosts('blogPostsContainer');
+    } else if (currentPath.includes('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
+        console.log("Initialisation de la page d'accueil...");
+        renderBooks('booksGrid', 5);
+        renderBlogPosts('blogPosts', 3);
+        setupContactForm();
+        setupSmoothScroll();
     }
 });
-// Dans votre fichier main.js
-
-function setupExcerptsPage() {
-    // Sélectionner tous les onglets et toutes les sections d'extraits
-    const tabs = document.querySelectorAll('.book-tab');
-    const excerpts = document.querySelectorAll('.book-excerpts');
-
-    // Si on n'est pas sur la page des extraits, ne rien faire
-    if (tabs.length === 0 || excerpts.length === 0) return;
-
-    // Fonction pour changer d'onglet
-    function switchTab(bookId) {
-        // Désactiver tous les onglets et sections
-        tabs.forEach(tab => tab.classList.remove('active'));
-        excerpts.forEach(excerpt => excerpt.classList.remove('active'));
-
-        // Activer l'onglet cliqué
-        const activeTab = document.querySelector(`.book-tab[data-book="${bookId}"]`);
-        if (activeTab) activeTab.classList.add('active');
-
-        // Afficher la section correspondante
-        const activeExcerpt = document.getElementById(`${bookId}-excerpts`);
-        if (activeExcerpt) activeExcerpt.classList.add('active');
+// Fonction pour initialiser la page de contact
+function setupContactPage() {
+    console.log("Initialisation de la page contact...");
+    
+    // Gestion du formulaire de contact
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const firstName = document.getElementById('firstName').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Validation simple
+            if (!firstName || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Simuler l'envoi du message
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulation d'envoi (à remplacer par un vrai envoi backend)
+            setTimeout(() => {
+                alert(`Thank you, ${firstName}! Your message has been sent successfully. I'll respond to you at ${email} within 2-3 business days.`);
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
     }
-
-    // Ajouter un écouteur d'événement à chaque onglet
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const bookId = this.getAttribute('data-book');
-            switchTab(bookId);
+    
+    // Gestion des FAQ (accordéon)
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            faqItem.classList.toggle('active');
         });
     });
-
-    // Activer le premier onglet par défaut
-    if (tabs.length > 0) {
-        const firstTab = tabs[0];
-        const firstBookId = firstTab.getAttribute('data-book');
-        switchTab(firstBookId);
-    }
 }
-
-// Dans la fonction d'initialisation principale, appeler setupExcerptsPage si on est sur la page d'extraits
-document.addEventListener('DOMContentLoaded', function() {
-    // ... autres initialisations ...
-
-    // Initialisation de la page d'extraits
-    setupExcerptsPage();
-
-    // ... autres initialisations ...
-});
