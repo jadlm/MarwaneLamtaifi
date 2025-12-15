@@ -374,7 +374,7 @@
                 <!-- Sidebar avec informations -->
                 <div class="contact-info-sidebar">
                     <div class="author-portrait">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Marwane Lamtaifi">
+                        <img src="images/marwa,e.jpeg" alt="Marwane Lamtaifi">
                     </div>
                     <h2>Marwane Lamtaifi</h2>
                     <p class="author-title">Author & Storyteller</p>
@@ -386,7 +386,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <a href="mailto:contact@marwanelamtaifi.com">contact@marwanelamtaifi.com</a>
+                                <a href="mailto:contact@marwanelamtaifi.com">lammarwane@icloud.com</a>
                             </div>
                         </div>
                         
@@ -580,101 +580,81 @@
     <script src="js/main.js"></script>
     <script>
         // Script pour la page de contact
-        document.addEventListener('DOMContentLoaded', function() {
-            // Gestion du formulaire de contact
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Récupérer les valeurs du formulaire
-                    const firstName = document.getElementById('firstName').value;
-                    const email = document.getElementById('email').value;
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // Validation simple
-                    if (!firstName || !email || !subject || !message) {
-                        alert('Please fill in all required fields.');
-                        return;
-                    }
-                    
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        alert('Please enter a valid email address.');
-                        return;
-                    }
-                    
-                    // Simuler l'envoi du message
-                    const submitBtn = contactForm.querySelector('.submit-btn');
-                    const originalText = submitBtn.innerHTML;
-                    
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    submitBtn.disabled = true;
-                    
-                    // Simulation d'envoi (à remplacer par un vrai envoi backend)
-                    setTimeout(() => {
-                        alert(`Thank you, ${firstName}! Your message has been sent successfully. I'll respond to you at ${email} within 2-3 business days.`);
-                        contactForm.reset();
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    }, 1500);
-                });
+      // Script pour la page de contact
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestion du formulaire de contact
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupérer les valeurs du formulaire
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const bookSelect = document.getElementById('bookSelect').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation simple
+            if (!firstName || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
             }
             
-            // Gestion des FAQ (accordéon)
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', function() {
-                    const faqItem = this.parentElement;
-                    faqItem.classList.toggle('active');
-                });
-            });
-            
-            // Mettre à jour l'année du copyright
-            const currentYear = new Date().getFullYear();
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                yearElement.textContent = currentYear;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
             }
             
-            // Mettre en surbrillance le lien actif dans la navigation
-            const currentPage = window.location.pathname;
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === 'contact.html') {
-                    link.classList.add('active');
-                }
-            });
+            // Construire le message pour WhatsApp
+            let whatsappMessage = `New Contact Form Submission:%0A%0A`;
+            whatsappMessage += `*Name:* ${firstName} ${lastName}%0A`;
+            whatsappMessage += `*Email:* ${email}%0A`;
+            whatsappMessage += `*Subject:* ${subject}%0A`;
+            
+            if (bookSelect) {
+                const bookText = document.getElementById('bookSelect').options[document.getElementById('bookSelect').selectedIndex].text;
+                whatsappMessage += `*Regarding Book:* ${bookText}%0A`;
+            }
+            
+            whatsappMessage += `*Message:*%0A${encodeURIComponent(message)}`;
+            
+            // Votre numéro WhatsApp (format international sans le +, les zéros, tirets ou parenthèses)
+            // Remplacez "212649295361" par votre numéro réel au format international
+            const whatsappNumber = "212649295361"; // Example: Morocco code 212[citation:3]
+            
+            // Créer le lien WhatsApp Click-to-Chat[citation:5]
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            
+            // Simuler l'envoi du message
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing WhatsApp...';
+            submitBtn.disabled = true;
+            
+            // Redirection vers WhatsApp après un bref délai
+            setTimeout(() => {
+                // Ouvrir WhatsApp dans un nouvel onglet
+                window.open(whatsappURL, '_blank');
+                
+                // Réinitialiser le formulaire
+                contactForm.reset();
+                
+                // Afficher un message de confirmation
+                alert(`Thank you, ${firstName}! You are now being redirected to WhatsApp to send your message. Please click "Send" in WhatsApp to complete the process.`);
+                
+                // Restaurer le bouton
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
         });
-        
-        // Fonction pour le menu mobile
-        function setupMobileMenu() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
-            
-            if (!mobileMenuBtn || !navLinks) return;
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-        }
-        
-        // Initialiser le menu mobile
-        setupMobileMenu();
-        
-        // Effet de défilement de l'en-tête
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    }
+    
+    // ... (le reste de votre code JavaScript existant reste inchangé)
+});
     </script>
 </body>
 </html>
