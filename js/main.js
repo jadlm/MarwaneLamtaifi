@@ -13,7 +13,7 @@ const books = [
         id: 2,
         title: "After You, My Shadow",
         year: "2023",
-        image: "https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/afteryou.webp",
         amazonLink: "https://www.amazon.com/After-You-My-Shadow-Mysterious-ebook/dp/B0DB6BBR5S/ref=sr_1_5?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-5",
         excerptLink: "excerpts.html#shadow"
     },
@@ -21,7 +21,7 @@ const books = [
         id: 3,
         title: "Une nuit À Taghazout",
         year: "2023",
-        image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/taghazout.webp",
         amazonLink: "https://www.amazon.com/Une-nuit-Taghazout-toujours-French/dp/B0G6D1J5Y4/ref=sr_1_1?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-1",
         excerptLink: "excerpts.html#taghazout"
     },
@@ -29,7 +29,7 @@ const books = [
         id: 4,
         title: "The Whispers of Love",
         year: "2023",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/book3.jpg",
         amazonLink: "https://www.amazon.com/Whispers-Love-Classic-Poem/dp/B0DBYG7W3Y/ref=sr_1_4?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-4",
         excerptLink: "excerpts.html#whispers"
     },
@@ -37,7 +37,7 @@ const books = [
         id: 5,
         title: "Under the Fallen Moon",
         year: "2023",
-        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        image: "images/under.jpg",
         amazonLink: "https://www.amazon.com/Under-Fallen-Moon-Written-Shadows/dp/B0G3L1MZG1?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.nQuMrDNoxNAaprp7Z3WYQDjcWsA5I4bFiGeSJzTpVekuBgOqCdRvQWs8rKVSs4ewjjlCVd0HNrvQiv7MfXNBHA.OdB9ge4Amsq1aF283BTSE_n-H30NC9wgMb4k84i9x-Q&dib_tag=AUTHOR",
         excerptLink: "excerpts.html#moon"
     }
