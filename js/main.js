@@ -1,11 +1,12 @@
 // Données pour les livres
+
 const books = [
     {
         id: 1,
         title: "Between Fear and Courage",
         year: "2023",
         image: "images/book1.jpg",
-        amazonLink: "https://www.amazon.com/dp/8863400273",
+        amazonLink: "https://www.amazon.com/After-You-My-Shadow-Mysterious-ebook/dp/B0DB6BBR5S?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.nQuMrDNoxNAaprp7Z3WYQDjcWsA5I4bFiGeSJzTpVekuBgOqCdRvQWs8rKVSs4ewjjlCVd0HNrvQiv7MfXNBHA.OdB9ge4Amsq1aF283BTSE_n-H30NC9wgMb4k84i9x-Q&dib_tag=AUTHOR",
         excerptLink: "excerpts.html"
     },
     {
@@ -13,7 +14,7 @@ const books = [
         title: "After You, My Shadow",
         year: "2023",
         image: "https://images.unsplash.com/photo-1544716278-e513176f20b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        amazonLink: "https://www.amazon.com/After-You-My-Shadow-Mysterious-ebook/dp/B0DB6BBR5S/ref=sr_1_5?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-5",
         excerptLink: "excerpts.html#shadow"
     },
     {
@@ -21,7 +22,7 @@ const books = [
         title: "Une nuit À Taghazout",
         year: "2023",
         image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        amazonLink: "https://www.amazon.com/Une-nuit-Taghazout-toujours-French/dp/B0G6D1J5Y4/ref=sr_1_1?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-1",
         excerptLink: "excerpts.html#taghazout"
     },
     {
@@ -29,7 +30,7 @@ const books = [
         title: "The Whispers of Love",
         year: "2023",
         image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        amazonLink: "https://www.amazon.com/Whispers-Love-Classic-Poem/dp/B0DBYG7W3Y/ref=sr_1_4?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-4",
         excerptLink: "excerpts.html#whispers"
     },
     {
@@ -37,7 +38,7 @@ const books = [
         title: "Under the Fallen Moon",
         year: "2023",
         image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        amazonLink: "https://www.amazon.com/dp/B0DDY48Q7B",
+        amazonLink: "https://www.amazon.com/Under-Fallen-Moon-Written-Shadows/dp/B0G3L1MZG1?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.nQuMrDNoxNAaprp7Z3WYQDjcWsA5I4bFiGeSJzTpVekuBgOqCdRvQWs8rKVSs4ewjjlCVd0HNrvQiv7MfXNBHA.OdB9ge4Amsq1aF283BTSE_n-H30NC9wgMb4k84i9x-Q&dib_tag=AUTHOR",
         excerptLink: "excerpts.html#moon"
     }
 ];
@@ -76,43 +77,60 @@ const blogPosts = [
 // Fonctions utilitaires
 function renderBooks(containerId, limit = null) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    console.log(`Container "${containerId}" trouvé:`, container);
+    
+    if (!container) {
+        console.error(`Container "${containerId}" non trouvé!`);
+        return;
+    }
     
     const booksToRender = limit ? books.slice(0, limit) : books;
+    console.log(`Livres à afficher: ${booksToRender.length}`);
     
     container.innerHTML = booksToRender.map(book => `
         <div class="book-card">
             <div class="book-img">
-                <img src="${book.image}" alt="${book.title}">
+                <img src="${book.image}" alt="${book.title}" loading="lazy">
             </div>
             <div class="book-info">
                 <h3 class="book-title">${book.title}</h3>
                 <div class="book-year">${book.year}</div>
                 <div class="book-links">
-                    <a href="${book.amazonLink}" class="book-link" target="_blank"><i class="fab fa-amazon"></i> Amazon</a>
-                    <a href="${book.excerptLink}" class="book-link"><i class="fas fa-book-open"></i> Excerpt</a>
+                    <a href="${book.amazonLink}" class="book-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-amazon"></i> Amazon
+                    </a>
+                    <a href="${book.excerptLink}" class="book-link">
+                        <i class="fas fa-book-open"></i> Excerpt
+                    </a>
                 </div>
             </div>
         </div>
     `).join('');
+    
+    console.log(`HTML généré pour ${containerId}:`, container.innerHTML);
 }
 
 function renderBlogPosts(containerId, limit = null) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        console.error(`Container "${containerId}" non trouvé!`);
+        return;
+    }
     
     const postsToRender = limit ? blogPosts.slice(0, limit) : blogPosts;
     
     container.innerHTML = postsToRender.map(post => `
         <div class="blog-card">
             <div class="blog-img">
-                <img src="${post.image}" alt="${post.title}">
+                <img src="${post.image}" alt="${post.title}" loading="lazy">
             </div>
             <div class="blog-content">
                 <span class="blog-date">${post.date}</span>
                 <h3 class="blog-title">${post.title}</h3>
                 <p class="blog-excerpt">${post.excerpt}</p>
-                <a href="${post.link}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="${post.link}" class="read-more">
+                    Read More <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     `).join('');
@@ -157,11 +175,13 @@ function setupHeaderScroll() {
 function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#' || targetId.startsWith('#')) {
+            if (href === '#' || href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href;
                 const targetElement = document.querySelector(targetId);
+                
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -249,20 +269,13 @@ function initAnimations() {
 
 // Fonction pour gérer les onglets des extraits
 function setupExcerptsPage() {
-    console.log("Initialisation de la page excerpts...");
-    
     const tabs = document.querySelectorAll('.book-tab');
     const excerpts = document.querySelectorAll('.book-excerpts');
-    
-    console.log(`Nombre d'onglets trouvés: ${tabs.length}`);
-    console.log(`Nombre de sections trouvées: ${excerpts.length}`);
     
     if (tabs.length === 0 || excerpts.length === 0) return;
     
     // Fonction pour changer d'onglet
     function switchTab(bookId) {
-        console.log(`Changement vers le livre: ${bookId}`);
-        
         // Désactiver tous les onglets et sections
         tabs.forEach(tab => {
             tab.classList.remove('active');
@@ -290,7 +303,6 @@ function setupExcerptsPage() {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             const bookId = this.getAttribute('data-book');
-            console.log(`Clic sur l'onglet: ${bookId}`);
             switchTab(bookId);
             
             // Mettre à jour l'URL sans recharger la page
@@ -304,14 +316,12 @@ function setupExcerptsPage() {
         const validBookIds = ['fear', 'shadow', 'taghazout', 'whispers', 'moon'];
         
         if (hash && validBookIds.includes(hash)) {
-            console.log(`Chargement initial depuis l'URL: ${hash}`);
             switchTab(hash);
         } else {
             // Activer le premier onglet par défaut
             const firstTab = document.querySelector('.book-tab');
             if (firstTab) {
                 const firstBookId = firstTab.getAttribute('data-book');
-                console.log(`Livre par défaut: ${firstBookId}`);
                 switchTab(firstBookId);
             }
         }
@@ -328,56 +338,18 @@ function setupExcerptsPage() {
     checkInitialBook();
 }
 
-// Initialisation générale
-// Initialisation générale
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM chargé - Initialisation...");
-    
-    // Initialiser les composants communs
-    setupMobileMenu();
-    setupHeaderScroll();
-    updateCopyrightYear();
-    setupNewsletterForms();
-    initAnimations();
-    
-    // Vérifier sur quelle page nous sommes
-    const currentPath = window.location.pathname;
-    console.log(`Page actuelle: ${currentPath}`);
-    
-    if (currentPath.includes('contact.html')) {
-        console.log("Initialisation de la page contact...");
-        setupContactPage();
-        setupSmoothScroll();
-    } else if (currentPath.includes('excerpts.html') || window.location.hash) {
-        console.log("Initialisation de la page excerpts...");
-        setupExcerptsPage();
-        setupSmoothScroll();
-    } else if (currentPath.includes('blog.html')) {
-        console.log("Initialisation de la page blog...");
-        renderBlogPosts('blogPostsContainer');
-    } else if (currentPath.includes('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
-        console.log("Initialisation de la page d'accueil...");
-        renderBooks('booksGrid', 5);
-        renderBlogPosts('blogPosts', 3);
-        setupContactForm();
-        setupSmoothScroll();
-    }
-});
 // Fonction pour initialiser la page de contact
 function setupContactPage() {
-    console.log("Initialisation de la page contact...");
-    
-    // Gestion du formulaire de contact
     const contactForm = document.getElementById('contactForm');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Récupérer les valeurs du formulaire
-            const firstName = document.getElementById('firstName').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+            const firstName = document.getElementById('firstName')?.value;
+            const email = document.getElementById('email')?.value;
+            const subject = document.getElementById('subject')?.value;
+            const message = document.getElementById('message')?.value;
             
             // Validation simple
             if (!firstName || !email || !subject || !message) {
@@ -391,14 +363,12 @@ function setupContactPage() {
                 return;
             }
             
-            // Simuler l'envoi du message
             const submitBtn = contactForm.querySelector('.submit-btn');
             const originalText = submitBtn.innerHTML;
             
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Simulation d'envoi (à remplacer par un vrai envoi backend)
             setTimeout(() => {
                 alert(`Thank you, ${firstName}! Your message has been sent successfully. I'll respond to you at ${email} within 2-3 business days.`);
                 contactForm.reset();
@@ -417,3 +387,63 @@ function setupContactPage() {
         });
     });
 }
+
+// Initialisation générale
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM chargé - Initialisation...");
+    
+    // Initialiser les composants communs
+    setupMobileMenu();
+    setupHeaderScroll();
+    updateCopyrightYear();
+    setupNewsletterForms();
+    initAnimations();
+    
+    // Vérifier sur quelle page nous sommes
+    const currentPath = window.location.pathname;
+    console.log("Page actuelle:", currentPath);
+    
+    // Détecter la page actuelle
+    if (currentPath.includes('contact.html')) {
+        console.log("Page: Contact");
+        setupContactPage();
+        setupSmoothScroll();
+    } else if (currentPath.includes('excerpts.html')) {
+        console.log("Page: Excerpts");
+        setupExcerptsPage();
+        setupSmoothScroll();
+    } else if (currentPath.includes('blog.html')) {
+        console.log("Page: Blog");
+        renderBlogPosts('blogPostsContainer');
+    } else {
+        // Page d'accueil (index.html, /, ou autre)
+        console.log("Page: Accueil");
+        
+        // Rendre les livres
+        const booksContainer = document.getElementById('booksGrid');
+        if (booksContainer) {
+            console.log("Conteneur booksGrid trouvé, rendu des livres...");
+            renderBooks('booksGrid', 5);
+        } else {
+            console.error("Conteneur booksGrid non trouvé!");
+        }
+        
+        // Rendre les articles de blog
+        const blogContainer = document.getElementById('blogPosts');
+        if (blogContainer) {
+            console.log("Conteneur blogPosts trouvé, rendu des articles...");
+            renderBlogPosts('blogPosts', 3);
+        }
+        
+        // Initialiser le formulaire de contact s'il existe
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            console.log("Formulaire de contact trouvé");
+            setupContactForm();
+        }
+        
+        setupSmoothScroll();
+    }
+    
+    console.log("Initialisation terminée");
+});
