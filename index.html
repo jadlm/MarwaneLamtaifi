@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elena Montague | Award-Winning Author</title>
+    <title>Marwane Lamtaifi | Award-Winning Author</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-pen-nib"></i> E.Montague</a>
+                <a href="index.html" class="logo"><i class="fas fa-pen-nib"></i> Marwane Lamtaifi</a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -26,7 +26,12 @@
                     <li><a href="excerpts.html">Excerpts</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#reviews">Reviews</a></li>
-                    <li><a href="index.html#news">News</a></li>
+                    <li>
+                        <a href="https://www.instagram.com/marwanelamtaifi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            News
+                        </a>
+                    </li>
+                    
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -124,8 +129,14 @@
     <section class="reviews-section" id="reviews">
         <div class="container">
             <h2 class="section-title-center">Reviews & Testimonials</h2>
-            <div class="reviews-container">
-                <!-- Reviews will be loaded by JavaScript -->
+            
+            <!-- CONTENEUR AVEC LE BON ID -->
+            <div class="reviews-container" id="reviewsContainer">
+                <!-- TEMPORAIRE: Afficher un message si JavaScript est désactivé -->
+                <div style="text-align: center; padding: 40px; color: #666;">
+                    <i class="fas fa-spinner fa-spin fa-2x" style="margin-bottom: 15px;"></i>
+                    <p>Chargement des critiques...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -151,7 +162,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">E.Montague</div>
+                <div class="footer-logo">Marwane Lamtaifi</div>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#books">Books</a></li>
@@ -163,7 +174,7 @@
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
                 <div class="copyright">
-                    <p>&copy; <span id="currentYear"></span> Elena Montague. All rights reserved.</p>
+                    <p>&copy; <span id="currentYear"></span> Marwane Lamtaifi. All rights reserved.</p>
                 </div>
             </div>
         </div>

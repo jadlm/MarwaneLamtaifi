@@ -1,5 +1,87 @@
 // Données pour les livres
+// Données pour les critiques
+const reviews = [
+    {
+        id: 1,
+        name: "Austin Macauley Publishers",
+        rating: 5,
+        text: "Having read all the reports and taken note of the Editors’ opinions we can confidently state that ‘Between Fear & Courage’ was found to be a most engaging and entertaining read that will undoubtedly captivate a wide audience. that makes your work a pleasant read. The Board were keen to comment on thedegree of suspense that your writing emits and how it always keeps the readers on the edge of their seat wanting more. The thrilling plot moves along briskly,  ‘Between Fear & Courage’ is a well-written and researched crime novel worthy of attention, and we believe it would have a place in the market.",
+        date: "March 15, 2024",
+        source: "Professional Review"
+    },
+    {
+        id: 2,
+        name: "Sarah Johnson",
+        rating: 5,
+        text: "I couldn't put this book down! The characters felt so real, and the story stayed with me long after I finished reading.",
+        date: "February 28, 2025",
+        source: "Reader Review"
+    },
+    {
+        id: 3,
+        name: "Book Bloggers United",
+        rating: 4,
+        text: "A compelling narrative with well-developed characters. The pacing keeps you engaged from start to finish.",
+        date: "April 2, 2025",
+        source: "Blog Review"
+    }
+];
 
+// Fonction pour générer les étoiles
+function generateStars(rating) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        stars += i <= rating 
+            ? '<i class="fas fa-star"></i>' 
+            : '<i class="far fa-star"></i>';
+    }
+    return stars;
+}
+
+// Fonction SIMPLIFIÉE pour afficher les critiques
+function renderReviews() {
+    console.log("Fonction renderReviews appelée");
+    
+    // ESSAYEZ LES DEUX IDS POSSIBLES
+    const container = document.getElementById('reviewsContainer') || 
+                     document.querySelector('.reviews-container');
+    
+    console.log("Conteneur trouvé:", container);
+    
+    if (!container) {
+        console.error("Aucun conteneur de critiques trouvé !");
+        console.log("IDs recherchés: 'reviewsContainer' et classe '.reviews-container'");
+        return;
+    }
+    
+    console.log(`${reviews.length} critiques à afficher`);
+    
+    // HTML simplifié sans animations complexes
+    container.innerHTML = reviews.map(review => `
+        <div class="review-card" style="border: 1px solid #ddd; padding: 20px; margin: 15px; border-radius: 8px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                <div style="color: gold; font-size: 18px;">
+                    ${generateStars(review.rating)}
+                </div>
+                <span style="background: #6c757d; color: white; padding: 4px 10px; border-radius: 12px; font-size: 12px;">
+                    ${review.source}
+                </span>
+            </div>
+            <p style="font-style: italic; color: #555; line-height: 1.6; margin-bottom: 15px;">
+                "${review.text}"
+            </p>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 15px;">
+                <strong style="color: #333;">${review.name}</strong>
+                <span style="color: #777; font-size: 14px;">${review.date}</span>
+            </div>
+        </div>
+    `).join('');
+    
+    console.log("Critiques affichées avec succès !");
+}
+
+// Initialisation DESACTIVÉE du carousel pour commencer
+// Nous allons d'abord vérifier que les critiques s'affichent
 const books = [
     {
         id: 1,
@@ -12,7 +94,7 @@ const books = [
     {
         id: 2,
         title: "After You, My Shadow",
-        year: "2023",
+        year: "2025",
         image: "images/afteryou.webp",
         amazonLink: "https://www.amazon.com/After-You-My-Shadow-Mysterious-ebook/dp/B0DB6BBR5S/ref=sr_1_5?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-5",
         excerptLink: "excerpts.html#shadow"
@@ -20,7 +102,7 @@ const books = [
     {
         id: 3,
         title: "Une nuit À Taghazout",
-        year: "2023",
+        year: "2025",
         image: "images/taghazout.webp",
         amazonLink: "https://www.amazon.com/Une-nuit-Taghazout-toujours-French/dp/B0G6D1J5Y4/ref=sr_1_1?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-1",
         excerptLink: "excerpts.html#taghazout"
@@ -28,7 +110,7 @@ const books = [
     {
         id: 4,
         title: "The Whispers of Love",
-        year: "2023",
+        year: "2024",
         image: "images/book3.jpg",
         amazonLink: "https://www.amazon.com/Whispers-Love-Classic-Poem/dp/B0DBYG7W3Y/ref=sr_1_4?crid=2IXZO6EH8FY5E&dib=eyJ2IjoiMSJ9.ybKT6pGOM_Q124G7CHBGyENEc2_OvQTNU3oQq5T8MN6L1kurj01ywkwIw_3dDZuOHE1JT5un4O0_FZ5X15Xoow.6V0ajJj6Y3H-X_pAEyuY6EbYvepFSMDj5vY41f7SeJI&dib_tag=se&keywords=marwane+lamtaifi&qid=1765817746&sprefix=marwane+%2Caps%2C306&sr=8-4",
         excerptLink: "excerpts.html#whispers"
@@ -36,7 +118,7 @@ const books = [
     {
         id: 5,
         title: "Under the Fallen Moon",
-        year: "2023",
+        year: "2025",
         image: "images/under.jpg",
         amazonLink: "https://www.amazon.com/Under-Fallen-Moon-Written-Shadows/dp/B0G3L1MZG1?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.nQuMrDNoxNAaprp7Z3WYQDjcWsA5I4bFiGeSJzTpVekuBgOqCdRvQWs8rKVSs4ewjjlCVd0HNrvQiv7MfXNBHA.OdB9ge4Amsq1aF283BTSE_n-H30NC9wgMb4k84i9x-Q&dib_tag=AUTHOR",
         excerptLink: "excerpts.html#moon"
@@ -54,24 +136,8 @@ const blogPosts = [
         category: "Writing Process",
         link: "blog-post.html?id=1"
     },
-    {
-        id: 2,
-        title: "Finding Inspiration in Everyday Life",
-        date: "May 3, 2023",
-        excerpt: "How ordinary moments can transform into extraordinary stories with the right perspective and attention to detail.",
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        category: "Creative Inspiration",
-        link: "blog-post.html?id=2"
-    },
-    {
-        id: 3,
-        title: "The Writer's Routine: Myths and Realities",
-        date: "April 18, 2023",
-        excerpt: "Debunking common misconceptions about how writers work and finding a routine that fosters creativity and productivity.",
-        image: "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        category: "Writing Process",
-        link: "blog-post.html?id=3"
-    }
+ 
+ 
 ];
 
 // Fonctions utilitaires
@@ -128,9 +194,10 @@ function renderBlogPosts(containerId, limit = null) {
                 <span class="blog-date">${post.date}</span>
                 <h3 class="blog-title">${post.title}</h3>
                 <p class="blog-excerpt">${post.excerpt}</p>
-                <a href="${post.link}" class="read-more">
-                    Read More <i class="fas fa-arrow-right"></i>
-                </a>
+              <a href="article.html" class="btn btn-primary read-more">
+    Read More <i class="fas fa-arrow-right"></i>
+</a>
+
             </div>
         </div>
     `).join('');
@@ -192,6 +259,7 @@ function setupSmoothScroll() {
         });
     });
 }
+
 
 function setupContactForm() {
     const contactForm = document.getElementById('contactForm');
@@ -389,8 +457,9 @@ function setupContactPage() {
 }
 
 // Initialisation générale
+// Initialisation générale
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM chargé - Initialisation...");
+    console.log("=== DÉBUT DE L'INITIALISATION ===");
     
     // Initialiser les composants communs
     setupMobileMenu();
@@ -399,11 +468,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setupNewsletterForms();
     initAnimations();
     
-    // Vérifier sur quelle page nous sommes
+    // DÉBUGAGE: Vérifier la page actuelle
     const currentPath = window.location.pathname;
-    console.log("Page actuelle:", currentPath);
+    console.log("Chemin de la page:", currentPath);
+    console.log("Hash URL:", window.location.hash);
     
-    // Détecter la page actuelle
+    // Vérifier sur quelle page nous sommes
     if (currentPath.includes('contact.html')) {
         console.log("Page: Contact");
         setupContactPage();
@@ -416,26 +486,33 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Page: Blog");
         renderBlogPosts('blogPostsContainer');
     } else {
-        // Page d'accueil (index.html, /, ou autre)
-        console.log("Page: Accueil");
+        console.log("Page: Accueil ou autre");
         
-        // Rendre les livres
+        // 1. AFFICHER LES LIVRES
         const booksContainer = document.getElementById('booksGrid');
+        console.log("Conteneur booksGrid:", booksContainer);
         if (booksContainer) {
-            console.log("Conteneur booksGrid trouvé, rendu des livres...");
             renderBooks('booksGrid', 5);
-        } else {
-            console.error("Conteneur booksGrid non trouvé!");
         }
         
-        // Rendre les articles de blog
+        // 2. AFFICHER LES ARTICLES DE BLOG
         const blogContainer = document.getElementById('blogPosts');
+        console.log("Conteneur blogPosts:", blogContainer);
         if (blogContainer) {
-            console.log("Conteneur blogPosts trouvé, rendu des articles...");
             renderBlogPosts('blogPosts', 3);
         }
         
-        // Initialiser le formulaire de contact s'il existe
+        // 3. CRITIQUES: TOUJOURS ESSAYER D'AFFICHER
+        console.log("Tentative d'affichage des critiques...");
+        
+        // Vérifier si la section reviews existe
+        const reviewsSection = document.getElementById('reviews');
+        console.log("Section reviews trouvée:", reviewsSection);
+        
+        // Appeler IMMÉDIATEMENT la fonction renderReviews
+        renderReviews();
+        
+        // 4. Initialiser le formulaire de contact
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
             console.log("Formulaire de contact trouvé");
@@ -445,5 +522,5 @@ document.addEventListener('DOMContentLoaded', function() {
         setupSmoothScroll();
     }
     
-    console.log("Initialisation terminée");
+    console.log("=== FIN DE L'INITIALISATION ===");
 });
